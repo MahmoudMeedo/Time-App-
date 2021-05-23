@@ -4,14 +4,13 @@ const watchContainer = document.querySelector(".watch");
 function watch() {
   let date = new Date();
   let currentTime = date.toLocaleString().slice(10);
-  if (currentTime[1] < "9") {
+  if (currentTime[0] < "10") {
     watchContainer.innerHTML = `<span>Local Time </span>${currentTime.replace(
       " ",
       "0"
     )}`;
-  } else {
-    watchContainer.innerHTML = currentTime;
   }
+  watchContainer.innerHTML = `<span>Local Time </span>${currentTime}`;
 }
 setInterval(watch, 1000);
 /***************************************************************/
@@ -53,15 +52,17 @@ function countHours() {
 }
 
 function countMinutes() {
-  if (minutes.value == 0) {
-    return NaN;
+  if (minutes.value == 0 && hours.value > 0) {
+    minutes.value = 59;
+    hours.value -= 1;
   }
   minutes.value -= 1;
 }
 
 function countSeconds() {
-  if (seconds.value == 0) {
-    return NaN;
+  if (seconds.value == 0 && minutes.value > 0) {
+    seconds.value = 60;
+    minutes.value -= 1;
   }
   seconds.value -= 1;
 }
