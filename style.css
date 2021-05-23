@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #581b98;
+}
+
+.container {
+  width: auto;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* Watch Style */
+.watch {
+  width: 400px;
+  margin: auto;
+  padding: 15px;
+  background-color: #c43a68;
+  color: #fff;
+  user-select: none;
+  font-size: 25px;
+  text-align: center;
+}
+
+.watch span {
+  color: #faee1c;
+}
+
+/* Counter Style*/
+.counter {
+  background-color: #9c1de7;
+  width: 600px;
+  margin: 50px auto;
+  padding: 15px;
+  height: 300px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter h1 {
+  color: #faee1c;
+  margin: 15px 0;
+  border-bottom: 5px solid;
+}
+
+.counter .values input {
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #f3558e;
+  border-radius: 5px;
+  font-size: 30px;
+}
+
+.counter .values input:focus {
+  outline: none;
+}
+
+.counter .unites {
+  width: 160px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+.counter .unites span {
+  width: 100%;
+  text-align: center;
+}
+
+.counter .btn {
+  margin-top: 15px;
+}
+
+.counter .btn button {
+  padding: 8px 25px;
+  border-radius: 3px;
+  background-color: #581b98;
+  color: #fff;
+  cursor: pointer;
+  border: 2px solid #faee1c;
+  font-size: 20px;
+}
+
+.btn-hidden {
+  display: none;
+}
