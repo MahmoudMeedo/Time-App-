@@ -26,6 +26,25 @@ let hoursInterval;
 let minutesInterval;
 let secondsInterval;
 
+/* Check Input Value */
+hours.onkeyup = () => {
+  if (hours.value >= 24) {
+    hours.value = 23;
+    minutes.value = 59;
+  }
+};
+minutes.onkeyup = () => {
+  if (minutes.value > 59) {
+    minutes.value = 59;
+    seconds.value = 59;
+  }
+};
+seconds.onkeyup = () => {
+  if (seconds.value > 59) {
+    seconds.value = 59;
+  }
+};
+
 function countHours() {
   if (hours.value == 0) {
     return NaN;
